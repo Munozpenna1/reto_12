@@ -1,6 +1,7 @@
 # reto_12
 # 1. Cantidad de vocales
-```Texto = "Texto.txt" #define la variable texto para seleccionar el archivo a abrir  
+```
+Texto = "Texto.txt" #define la variable texto para seleccionar el archivo a abrir  
 
 with open(Texto, 'r') as archivo:
     contenido = archivo.read() # se lee el texto 
@@ -23,7 +24,8 @@ print("La cantidad de vocales en el texto es:", cantidad_vocales) # se imprime l
 
 
 # 2.Cantidad de consonantes
-```Texto = "Texto.txt" # se define la variable del texto a abrir
+```
+Texto = "Texto.txt" # se define la variable del texto a abrir
 
 with open(Texto, 'r') as archivo: # el texto se abre y se define como archivo
     contenido = archivo.read() # el archivo se lee 
@@ -46,7 +48,8 @@ print("La cantidad de consonantes en el texto es:", Catidad_Letras)
 
 
 # 3. Listado de las 50 palabras que más se repiten
-```Texto = "Texto.txt" #se define la variable
+```
+Texto = "Texto.txt" #se define la variable
 
 with open(Texto, 'r') as archivo: 
     contenido = archivo.read()
