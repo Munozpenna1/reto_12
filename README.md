@@ -1,17 +1,17 @@
 # reto_12
 # 1. Cantidad de vocales
 ```
-Texto = "Texto.txt" #define la variable texto para seleccionar el archivo a abrir  
+Texto = "Texto.txt" # se define el texto como variable para poder utilizar el texto sin tener que pegarlo en el codigo  
 
 with open(Texto, 'r') as archivo:
     contenido = archivo.read() # se lee el texto 
 
 def contar_vocales(texto):
-    vocales = 'aeiouAEIOU'  # Escribimos las vocales en minúsculas y mayusculas
+    vocales = 'a','e','i','o','u','A','E','I','O','U'  # Escribimos las vocales en minúsculas y mayusculas
     contador = 0 # se inicia el recuento
 
-    for letra in texto:  # se buscan los digitos 
-        if letra in vocales:
+    for letras in texto:  # se buscan los digitos 
+        if letras in vocales:
             contador += 1
 
     return contador
@@ -31,7 +31,7 @@ with open(Texto, 'r') as archivo: # el texto se abre y se define como archivo
     contenido = archivo.read() # el archivo se lee 
 
 def contar_Letras(texto):  #se define la funcion a realizar 
-    Letras = 'QWRTYPSDFGHJKLÑZXCVBNMqwrtypsdfghjklñzxcvbnm' # se definen los digitos a buscar tanto en minusculas como en mayusculas sin separarlas para evitar que cuente espacios ya que estos tambien se representan  
+    Letras = 'Q', 'W', 'R', 'T', 'Y', 'P', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Ñ', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', 'q', 'w', 'r', 't', 'y', 'p', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'ñ', 'z', 'x', 'c', 'v', 'b', 'n', 'm' # se definen los digitos a buscar tanto en minusculas como en mayusculas sin separarlas para evitar que cuente espacios ya que estos tambien se representan  
     contador = 0 # se inicia el contador 
 
     for letra in texto:       # se empieza a contar las letras
