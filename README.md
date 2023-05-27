@@ -40,7 +40,7 @@ def contar_Letras(texto):  #se define la funcion a realizar
 
 
 Catidad_Letras = contar_Letras(contenido)   # se da ek uso 
-print("La cantidad de vocales en el texto es:", Catidad_Letras)
+print("La cantidad de consonantes en el texto es:", Catidad_Letras)
 ```
 
 
