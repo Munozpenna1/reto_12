@@ -76,7 +76,8 @@ palabras_mas_repetidas = contar_palabras(contenido)
 print("50 palabras más repetidas:")
 for palabra in palabras_mas_repetidas:
     print(palabra)
-    ```
+    
+```
 
 
 # 4.Listado de destinatarios con cantidad de mensajes recibidos en el texto.
