@@ -79,9 +79,67 @@ for palabra in palabras_mas_repetidas:
     ```
 
 
-# 4.Listado de destinatarios con cantidad de mensajes recibidos
+# 4.Listado de destinatarios con cantidad de mensajes recibidos en el texto.
+
+´´´
+Texto = "Texto.txt"
+
+def destinatarios_mensanjes(archivo):
+   cuenta_destinatarios = {} 
+   
+   with open(archivo, 'r') as archivo_texto:
+       for line in archivo_texto: 
+           linea = line.strip() 
+           if linea.startswith("To" and "for"):
+               destinatario = linea[4:].strip()  
+               cuenta_destinatarios[destinatario] = cuenta_destinatarios.get(destinatario, 0) + 1  
+               
+   print("Listado de destinatarios con cantidad de mensajes recibidos:")
+   for destinatario, cuenta in cuenta_destinatarios.items():
+       print(f"{destinatario}: {cuenta} mensajes")
+destinatarios_mensanjes("Texto.txt")
+´´´
+
 
 
 
 
 # 5. Cantidad de mensajes enviados por cada día 
+
+
+´´´
+Texto = "Texto.txt"
+
+def contar_mensajes_diarios(texto: str) -> dict:
+    msg = []  # Lista para almacenar los segmentos del texto que contienen información sobre la fecha.
+    palabras = texto.split()  # Dividir el texto en palabras individuales utilizando split().
+
+    for i in range(len(palabras)):
+        if palabras[i] == "Received:":  # Crear una lista de palabras desde "Received" hasta "(GMT)" o "-0500".
+            segmento = []
+            while palabras[i] != "-0500" and palabras[i] != "(GMT)":
+                segmento.append(palabras[i])
+                i += 1
+            msg.append(segmento)
+
+    msg_dia = {}  # Diccionario para almacenar el día y el número de mensajes enviados.
+
+    for segmento in msg:
+        indice = segmento.index('Jan')  # Índice de la palabra "Jan".
+        dia = int(segmento[indice - 1])  # Extraer el día basado en el índice de "Jan".
+        if dia in msg_dia:
+            msg_dia[dia] += 1
+        else:
+            msg_dia[dia] = 1
+
+    return msg_dia
+
+if __name__ == "__main__":
+    archivo = "Texto.txt"
+    with open(archivo, "r") as archivo_texto:
+        numero_dia = contar_mensajes_diarios(archivo_texto.read())
+        for dia in numero_dia:
+            print(f"{numero_dia[dia]} mensajes enviados el {dia} de enero, 2008")
+
+
+´´´
