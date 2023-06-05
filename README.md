@@ -81,7 +81,7 @@ for palabra in palabras_mas_repetidas:
 
 # 4.Listado de destinatarios con cantidad de mensajes recibidos en el texto.
 
-´´´
+```
 Texto = "Texto.txt"
 
 def destinatarios_mensanjes(archivo):
@@ -98,8 +98,7 @@ def destinatarios_mensanjes(archivo):
    for destinatario, cuenta in cuenta_destinatarios.items():
        print(f"{destinatario}: {cuenta} mensajes")
 destinatarios_mensanjes("Texto.txt")
-´´´
-
+```
 
 
 
@@ -107,7 +106,7 @@ destinatarios_mensanjes("Texto.txt")
 # 5. Cantidad de mensajes enviados por cada día 
 
 
-´´´
+```
 Texto = "Texto.txt"
 
 def contar_mensajes_diarios(texto: str) -> dict:
@@ -141,5 +140,4 @@ if __name__ == "__main__":
         for dia in numero_dia:
             print(f"{numero_dia[dia]} mensajes enviados el {dia} de enero, 2008")
 
-
-´´´
+```
